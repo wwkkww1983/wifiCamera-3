@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.icatch.sbcapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "R1.4.12"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'x86', 'arm64-v8a' , 'armeabi-v7a'//, 'x86_64'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/wificammobilesdk.jar')
+    compile files('libs/android-support-v7-recyclerview.jar')
+    compile files('libs/stickyheadergridviewlib.jar')
+    compile files('libs/photoView.jar')
+    compile files('libs/icatchbluetoothsdk.jar')
+    compile files('libs/bugly_crash_release.jar')
+    compile files('libs/litepal-1.4.1.jar')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/google-api-client-1.22.0.jar')
+    compile files('libs/google-api-client-android-1.22.0.jar')
+    compile files('libs/google-api-services-tasks-v1-1.2.2-beta.jar')
+    compile files('libs/google-api-services-youtube-v3-rev180-1.22.0.jar')
+    compile files('libs/google-collections-1.0.jar')
+    compile files('libs/google-http-client-1.22.0.jar')
+    compile files('libs/google-http-client-jackson2-1.22.0.jar')
+    compile files('libs/google-oauth-client-1.22.0.jar')
+    compile files('libs/google-oauth-client-java6-1.22.0.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/jackson-core-2.1.3.jar')
+    compile files('libs/okhttp-2.7.5.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/zxing.jar')
+    // Dependency for Google Sign-In
+    compile 'com.google.android.gms:play-services-auth:10.2.1'
+    compile 'com.github.scribejava:scribejava-apis:2.8.1'
+    compile files('libs/glide-3.8.0.jar')
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_progress_wheel"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    >
+
+    <com.icatch.sbcapp.ExtendComponent.ProgressWheel
+        android:id="@+id/pw_spinner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        ProgressWheel:barColor="#0097D6"
+        ProgressWheel:barLengthP="100dp"
+        ProgressWheel:barWidth="5dp"
+        ProgressWheel:rimColor="#330097D6"
+        ProgressWheel:rimWidth="10dp"
+        ProgressWheel:text="Loading..."
+        ProgressWheel:textColor="@android:color/white"
+        ProgressWheel:contourColor="#330097D6"
+        ProgressWheel:textSize="14sp" />
+</LinearLayout>
